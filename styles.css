@@ -1,0 +1,253 @@
+/* =======================================================
+   1. Base Reset & Document Settings
+   ======================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1.0625rem;
+}
+
+body {
+  background-color: #e6ccb2;
+  direction: rtl;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Tajawal', sans-serif;
+}
+
+:root {
+  --text-color: #4a4a4a;
+  --light-bg: #f9f6ef;
+  --header-bg: #a6a6a6;
+  --border-color: #ccc;
+  --font-main: 'Tajawal', sans-serif;
+}
+
+/* =======================================================
+   2. Typography & Fonts
+   ======================================================= */
+
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+  white-space: normal;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #000;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: #000;
+}
+
+h3 {
+  font-size: 1.1em;
+  color: #000;
+}
+
+p {
+  font-size: 0.8em;
+  color: #000;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* =======================================================
+   3. Layout: Containers & Grid
+   ======================================================= */
+
+.browser-frame {
+  font-size: clamp(0.9rem, 3.5vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ede0d4;
+  border: 0.125rem solid #000;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 95%;
+  overflow: hidden;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  text-align: right;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* =======================================================
+   4. UI Elements: Top Bar & Header
+   ======================================================= */
+
+.top-bar {
+  background: #ede0d4;
+  padding: 0.625rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 0.125rem solid #000;
+}
+
+.top-bar .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  width: 6rem;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 7.5rem;
+  }
+}
+
+/* =======================================================
+   5. Components: Accordion Cards
+   ======================================================= */
+
+.card {
+  background-color: var(--light-bg);
+  border: 0.125rem solid #000;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card summary {
+  list-style: none;
+  text-align: right;
+  font-family: var(--font-main);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: #ede0d4;
+  border-bottom: 0.125rem solid #000;
+  user-select: none;
+}
+
+.card summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease 0.1s;
+  background-color: #ede0d4;
+  padding: 0 1rem;
+}
+
+.card[open] .accordion-body {
+  max-height: 2000px;
+  opacity: 1;
+  padding: 1rem;
+}
+
+.card ul {
+  padding-right: 1.5rem;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* =======================================================
+   6. Buttons & Link Styles
+   ======================================================= */
+
+.linker {
+  display: inline-flex;
+  direction: ltr;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.linker:focus {
+  outline: 2px dashed var(--text-color);
+  outline-offset: 4px;
+}
+
+.linker i {
+  color: #000;
+}
+
+.button-banner {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* =======================================================
+   7. Footer
+   ======================================================= */
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 2rem;
+}
