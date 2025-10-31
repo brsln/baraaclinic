@@ -1,6 +1,6 @@
-# Clinical Nutritionist Website
+# Nutrition Clinic Website
 
-This repository contains the source code and content for Baraa's Clinical Nutritionist website.  
+This repository contains the source code and content for Baraa's Nutrition Clinic Website.  
 The website is designed to support patients by providing clear information on booking, policies, directions, and contact details.
 
 ## Features
