@@ -1225,6 +1225,18 @@ img {
     font-size: 1.25rem;
 }
 
+@media (max-width: 640px) {
+    .btn-cta-sub {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        height: auto;
+        white-space: normal;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
 /* Icon Utilities */
 .icon-primary {
     color: var(--color-primary);
