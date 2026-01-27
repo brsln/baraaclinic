@@ -263,8 +263,8 @@ img {
 }
 
 .nav-link {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--color-primary);
     padding: 0.5rem 1rem;
     border-radius: var(--radius-sm);
