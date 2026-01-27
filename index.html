@@ -395,6 +395,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Close mobile menu when clicking on nav links
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuCheckbox = document.getElementById('mobile-menu-toggle');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    menuCheckbox.checked = false;
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
